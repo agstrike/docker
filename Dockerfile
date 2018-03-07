@@ -1,18 +1,14 @@
 FROM python:slim-stretch
 
-# Install mysql client
-RUN apt-get update && apt-get install -y gcc
-
-# install deps
-RUN pip install --no-cache-dir silverstrike whitenoise uwsgi psycopg2-binary dj-database-url
-
-RUN apt-get remove -y gcc
 
 # Copy the code
-RUN mkdir /code
+ADD . /code
 WORKDIR /code
 
-ADD . /code
+# install deps
+RUN apt-get update && apt-get install -y gcc
+RUN pip install --no-cache-dir -r requirements.txt
+RUN apt-get remove -y gcc
 
 # configure django
 ENV DJANGO_SETTINGS_MODULE=settings
