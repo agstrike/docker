@@ -7,7 +7,7 @@ WORKDIR /code
 # install deps
 RUN apt-get update && apt-get install -y gcc
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apt-get remove -y gcc
+RUN apt-get remove -y gcc && apt-get autoremove -y
 
 # configure django
 ENV DJANGO_SETTINGS_MODULE=settings
