@@ -1,4 +1,4 @@
-silverstrike
+-e git+https://github.com/agstrike/silverstrike.git
 whitenoise
 uwsgi
 psycopg2-binary
