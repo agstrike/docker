@@ -1,6 +1,5 @@
 FROM python:slim-stretch
 
-
 # Copy the code
 ADD . /code
 WORKDIR /code
