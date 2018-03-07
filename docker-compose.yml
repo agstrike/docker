@@ -6,8 +6,7 @@ services:
       - ALLOWED_HOSTS='*'
       - DATABASE_URL=postgres://silverstrike:secretpass@database/silverstrikedb
       - SECRET_KEY=PLprXpLzxemgLD57GPQQ84SBZdLVKFYg
-    build: .
-    # image: simhnna/silverstrike
+    image: simhnna/silverstrike
     links:
       - database:database
     ports:
