@@ -3,3 +3,7 @@ whitenoise
 uwsgi
 psycopg2-binary
 dj-database-url
+django
+django-widget-tweaks
+python-dateutil
+django-allauth
