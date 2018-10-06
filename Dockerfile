@@ -6,7 +6,7 @@ ADD . /code
 WORKDIR /code
 
 # install deps
-RUN apt-get update && apt-get install -y gcc libmysqlclient-dev python3-dev && \
+RUN apt-get update && apt-get install -y gcc libmariadb-dev python3-dev && \
     pip install --no-cache-dir -r requirements.txt && \
     apt-get remove -y gcc && apt-get autoremove -y
 
