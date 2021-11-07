@@ -1,6 +1,0 @@
-silverstrike
-whitenoise
-uwsgi
-psycopg2-binary
-dj-database-url
-mysqlclient
