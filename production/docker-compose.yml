@@ -10,6 +10,6 @@ services:
     volumes:
       - ./start.sh:/app/start.sh
       - ./settings_override.py:/app/local_settings.py
-      - app_data:/data
+      - data:/data
 volumes:
-  app_data:
+  data:

@@ -8,7 +8,10 @@ services:
     ports:
       - "8000:8000"
     volumes:
+      # - data:/data
       - ./start.sh:/app/start.sh
       - ./demo_middleware.py:/app/demo_middleware.py
       - ./settings_override.py:/app/local_settings.py
+# volumes:
+#   data:
 

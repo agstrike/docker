@@ -1,6 +1,7 @@
 SECRET_KEY="$_99bc($w4iv1h8qn=q5*g-gtb&99db+0kls8m6+avmzu8w^8x"
-CSRF_TRUSTED_ORIGINS = ['demo.silverstrike.org']
-ALLOWED_HOSTS = ['demo.silverstrike.org']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', 'http://localhost:8080', 'https://demo.silverstrike.org']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'demo.silverstrike.org']
+DEBUG = True
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
