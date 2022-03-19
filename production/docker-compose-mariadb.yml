@@ -1,0 +1,23 @@
+version: "3"
+services:
+  database:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_DATABASE: silverstrikedb
+      MARIADB_USER: silverstrike
+      MARIADB_PASSWORD: secretpass
+  ags:
+    image: simhnna/silverstrike:dev
+    restart: always
+    entrypoint: /app/start.sh
+    environment:
+      - DATABASE_URL=mysql://silverstrike:secretpass@database/silverstrikedb
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./start.sh:/app/start.sh
+      - ./settings_override.py:/app/local_settings.py
+      - app_data:/data
+volumes:
+  app_data:
